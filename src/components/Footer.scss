@@ -1,0 +1,28 @@
+footer{
+    
+    padding: 4.5rem 0;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.7);
+
+    .footer-content{
+
+        a{
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        ul{
+            padding: 0;
+            li{
+                list-style: none;
+                margin-bottom: 15px;
+                
+                a{
+                    text-decoration: 1px solid underline;
+                }
+            }
+        }
+        .translate,p{
+            padding: 10px 0px;
+        }
+    }
+}

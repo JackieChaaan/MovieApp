@@ -1,0 +1,59 @@
+.poster2 {
+    background-color: black;
+    padding: 1rem 0;
+
+    .container {
+        .poster2-title {
+
+            h2 {
+                font-size: 20px;
+                color: white;
+            }
+        }
+
+        .poster2-content {
+            padding: 15px 0;
+
+            .row {
+                --bs-gutter-y: 1.5rem;
+
+                .main-wrapper {
+                    background: linear-gradient(149deg,
+                            #192247 0%,
+                            #210e17 96.86%);
+                    border-radius: 10px;
+                    padding: 10px 5px;
+                    height: 100%;
+
+                    .content-wrapper{
+                        padding: 10px 8px 80px;
+                        position: relative;
+                        height: 100%;
+
+                        .content-title{
+                            padding: 10px 0;
+    
+                            h4{
+                                color: white;
+                            }
+                        }
+                        .content-details{
+                            padding: 10px 0;
+    
+                            p{
+                                color: #FFFFFFB3;
+                            }
+                        }
+                        .icon{
+                            position: absolute;
+                            right: 5px;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+

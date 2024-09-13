@@ -1,0 +1,14 @@
+.genre-item {
+    background-color: #414141;
+    color: white;
+    margin: 5px;
+    padding: 3px 4px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    
+    @media only screen and (max-width : '600px') {
+        font-size: 10px;
+        margin: 5px;
+    }
+}
+

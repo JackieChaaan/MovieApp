@@ -1,0 +1,223 @@
+.movie-popup {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+
+    .pop-up {
+        padding: 30px 0px;
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .pop-up-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: left;
+                flex-direction: column;
+                max-width: 650px;
+                min-width: 290px;
+                position: relative;
+                border-radius: 10px;
+                border: 1px solid rgba(128, 128, 128, 0.4);
+                padding-bottom: 25px;
+                background-color: rgb(22, 22, 22);
+
+                ::after {
+                    content: '';
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background: linear-gradient(to top, #0000000d, transparent), linear-gradient(to right, #00000008, transparent)
+                }
+
+                .closeBtn {
+                    position: absolute;
+                    z-index: 2;
+                    top: 20px;
+                    right: 20px;
+                    border: none;
+                    outline: none;
+                    padding: 2px 8px;
+                    border-radius: 50px;
+                    font-size: 24px;
+                    color: white;
+                    background-color: transparent;
+                    transition-duration: 250ms;
+                    transition-property: background-color, border-color;
+                    transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+
+                    &::after {
+                        background: transparent;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgba(128, 128, 128, 0.4);
+                        border-color: rgba(0, 0, 0, 0);
+                        color: rgb(255, 255, 255);
+                        transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+                    }
+                }
+
+                .movie-poster {
+                    width: 100%;
+                    max-height: 400px;
+                    position: relative;
+                    border-radius: 10px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: 0 -175px;
+
+                    }
+                }
+
+                .movie-title {
+                    position: absolute;
+                    top: 310px;
+                    padding: 0 30px;
+                    color:#FFC600;
+                    z-index: 2;
+                    background-color: transparent;
+
+                    &::after{
+                        background-color: transparent;
+                    }
+
+                    h1 {
+                        font-family: "Abril Fatface", system-ui;
+                        font-weight: 400;
+                        font-style: normal;
+                        background-color: transparent;
+                        z-index: 2;
+
+                        &::after{
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                .more-dtls {
+                    display: flex;
+                    z-index: 1;
+                    padding: 2px 20px;
+
+                    .more {
+                        background-color: #414141;
+                        color: white;
+                        margin: 5px;
+                        padding: 3px 4px;
+                        border-radius: 5px;
+                        text-transform: capitalize;
+                    }
+                    .genre{
+                        display: flex;
+                    }
+                }
+
+                .about-movie {
+                    z-index: 1;
+                    padding: 10px 30px;
+
+                    p {
+                        color: white;
+                    }
+                }
+
+                .get-start-btn {
+                    padding: 10px 30px;
+                    z-index: 1;
+
+                    button {
+                        padding: 7px 35px 7px 15px;
+                        color: white;
+                        background-color: red;
+                        border-radius: 5px;
+                        outline: none;
+                        border: none;
+                        position: relative;
+                        font-size: 18px;
+
+                        &::after{
+                            content: ' \003E';
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            color: white;
+                            left: 48px;
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media only screen and (max-width : '600px') {
+    .movie-popup{
+        .pop-up{
+            padding: 80px 0px;
+            .container{
+                .pop-up-wrapper{
+                    .movie-poster{
+                        max-height: 200px;
+
+                        img{
+                            object-position: 0 -70px;
+                        }
+                    }
+                    .movie-title{
+                        top: 160px;
+                    }
+                    .more-dtls{
+                        .more{
+                            font-size: 10px;
+                            margin: 5px;
+                        }
+                    }
+                    .about-movie{
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                    .get-start-btn{
+                        button{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : '601px') and (max-width : '1024px'){
+    .movie-popup{
+        .pop-up{
+            .container{
+                .pop-up-wrapper{
+                    .movie-poster{
+                        max-height: 320px;
+                    }
+                    .movie-title{
+                        top: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
