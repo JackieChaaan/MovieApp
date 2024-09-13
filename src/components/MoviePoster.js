@@ -9,7 +9,7 @@ const MoviePoster = ({ imdb }) => {
   
   const getPoster = async () => {
     try {
-      const respo = await axios.get(`http://www.omdbapi.com/?i=${imdb}&apikey=${API_KEY}`);
+      const respo = await axios.get(`https://www.omdbapi.com/?i=${imdb}&apikey=${API_KEY}`);
       setPoster(respo.data.Poster);
       
       
