@@ -9,30 +9,38 @@ import LoaderComponent from './LoaderComponent';
 const Popup = ({ imdb, onClose }) => {
 
     const [popupMovieDtls, setPopupMovieDtls] = useState(null);
+    const [loading, setLoading] = useState(true);
     const API_KEY = "530c7911";
 
     const getFullDetails = async () => {
         try {
-            const response = await axios.get(`http://www.omdbapi.com/?i=${imdb}&apikey=${API_KEY}`);
+            const response = await axios.get(`https://www.omdbapi.com/?i=${imdb}&apikey=${API_KEY}`);
             setPopupMovieDtls(response.data);
-            ;
+            setLoading(false);
 
 
         } catch (e) {
             console.error('Error, Not find', e);
+            setLoading(false);
         }
     }
 
     useEffect(() => {
-        if (imdb) getFullDetails();
+        if (imdb) {
+            setLoading(true)
+            getFullDetails();
+        }
     }, [imdb])
+
+
 
 
     return (
         <>
 
             <section className='movie-popup'>
-                {popupMovieDtls ? (
+                
+                {loading ? (<LoaderComponent/>) : (popupMovieDtls && (
                     <div className="pop-up">
                         <div className="container">
                             <div className="pop-up-wrapper">
@@ -54,7 +62,7 @@ const Popup = ({ imdb, onClose }) => {
                                         {popupMovieDtls.Type}
                                     </div>
                                     <div className="genre">
-                                        <Genre genre = {popupMovieDtls.Genre}/>
+                                        <Genre genre={popupMovieDtls.Genre} />
                                     </div>
                                 </div>
                                 <div className="about-movie">
@@ -66,8 +74,7 @@ const Popup = ({ imdb, onClose }) => {
                             </div>
                         </div>
                     </div>
-                ) :
-                    (<LoaderComponent/>)
+                ))
                 }
             </section>
 
