@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './Poster1.scss'
-import { MovieContext, TrendingMovieList } from './MovieContext'
 import MovieCard from './MovieCard';
 
 function Poster1() {
