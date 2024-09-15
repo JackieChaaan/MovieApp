@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/MovieApp/static/css/main.fe54cd54.css",
+    "main.js": "/MovieApp/static/js/main.5cd7c5fc.js",
+    "static/js/453.1c29ee80.chunk.js": "/MovieApp/static/js/453.1c29ee80.chunk.js",
+    "static/media/NetflixNewBanner.jpg": "/MovieApp/static/media/NetflixNewBanner.cd5c08cb9b6473fb213b.jpg",
+    "static/media/Netflix_2015_logo.svg.png": "/MovieApp/static/media/Netflix_2015_logo.svg.f7c96e3ba74a835c0a32.png",
+    "static/media/slick.svg": "/MovieApp/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/MovieApp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/MovieApp/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/MovieApp/index.html",
+    "static/media/slick.woff": "/MovieApp/static/media/slick.295183786cd8a1389865.woff",
+    "main.fe54cd54.css.map": "/MovieApp/static/css/main.fe54cd54.css.map",
+    "main.5cd7c5fc.js.map": "/MovieApp/static/js/main.5cd7c5fc.js.map",
+    "453.1c29ee80.chunk.js.map": "/MovieApp/static/js/453.1c29ee80.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe54cd54.css",
+    "static/js/main.5cd7c5fc.js"
+  ]
+}
